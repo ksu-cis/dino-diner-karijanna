@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using Xunit;
-using DinoDiner.Menu.Entrees;
 
-namespace MenuTest.Entrees
+namespace DinoDiner.Menu.Entrees
 {
     public class VelociWrapUnitTest
     {
@@ -53,7 +52,7 @@ namespace MenuTest.Entrees
         public void HoldCheeseShouldRemoveCheese()
         {
             VelociWrap vw = new VelociWrap();
-            vw.holdCheese();
+            vw.HoldCheese();
             Assert.DoesNotContain<string>("Parmesan Cheese", vw.Ingredients);
         }
     }

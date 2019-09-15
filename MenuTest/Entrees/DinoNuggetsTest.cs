@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Xunit;
 
-namespace MenuTest.Entrees
+namespace DinoDiner.Menu.Entrees
 {
     public class DinoNuggetsUnitTest
     {
@@ -55,7 +55,7 @@ namespace MenuTest.Entrees
             {
                 if (ingredient.Equals("Chicken Nugget")) nuggetCount++;
             }
-            Assert.Equal(7, nuggetCount);
+            Assert.Equal(8, nuggetCount);
             Assert.Equal<int>(8, dn.Ingredients.Count);
 
         }
@@ -76,11 +76,11 @@ namespace MenuTest.Entrees
         {
             DinoNuggets dn = new DinoNuggets();
             dn.AddNugget();
-            Assert.Equal(dn.Calories, 59*7);
+            Assert.Equal<uint>(dn.Calories, 59*7);
             dn.AddNugget();
-            Assert.Equal(dn.Calories, 59*8);
+            Assert.Equal<uint>(dn.Calories, 59 * 8);
             dn.AddNugget();
-            Assert.Equal(dn.Calories, 59*9);
+            Assert.Equal<uint>(dn.Calories, 59 * 9);
         }
     }
 }
